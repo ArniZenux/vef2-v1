@@ -1,0 +1,29 @@
+{
+  "name": "vef2-v1",
+  "version": "1.0.0",
+  "description": "Verkefni 1 - Vefforritun II - 2022",
+  "scripts": {
+    "start": "node main.js",
+    "eslint": "eslint *.js **/*.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "2.27.5",
+    "eslint": "7.32.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "2.25.2",
+    "prettier": "2.4.1",
+    "sass": "^1.42.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-config-standard": "^22.0.0"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "path": "^0.12.7"
+  }
+}
