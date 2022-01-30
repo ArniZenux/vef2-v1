@@ -1,7 +1,7 @@
 const path = require('path');
 const util = require('util');
 const express = require('express');
-const gagn = require('./gagn');
+const gagn = require('./lib/gagn');
 
 const app = express();
 
