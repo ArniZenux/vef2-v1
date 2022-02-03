@@ -27,7 +27,6 @@ export function makeResult(max, min, variance, medaltal, median, stdDev, summu, 
 export function makeList(entries) {
   let list = '';
   for (const entry of entries) {
-    // const { slug, title } = entry;
     const link = `
       <section>
         <ul>
