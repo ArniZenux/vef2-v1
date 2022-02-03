@@ -1,33 +1,33 @@
-export function make_resultHTML(max, min, variance, medaltal, median, std_dev, summu, svid_range){
-  const _max = max;
-  const _min = min;
-  const _var = variance;
-  const _mean = medaltal;
-  const _med = median;
-  const _dev = std_dev;
-  const _sum = summu;
-  const _range = svid_range;
+export function makeResult(max, min, variance, medaltal, median, stdDev, summu, svidRange){
+  const zmax = max;
+  const zmin = min;
+  const zvar = variance;
+  const zmean = medaltal;
+  const zmed = median;
+  const zdev = stdDev;
+  const zsum = summu;
+  const zrange = svidRange;
 
   const template = `
     <section>
-      <p>Frávik : ${_var}</p>
-      <p>Hæsta gildi: ${_max}</p>
-      <p>Minnsta gildi: ${_min}</p>
-      <p>Meðaltal : ${_mean}</p>
-      <p>Miðgildi : ${_med}</p>
-      <p>Staðalfrávik: ${_dev}</p>
-      <p>Summu: ${_sum}</p>
-      <p>Svið : ${_range}</p>
+      <p>Frávik : ${zvar}</p>
+      <p>Hæsta gildi: ${zmax}</p>
+      <p>Minnsta gildi: ${zmin}</p>
+      <p>Meðaltal : ${zmean}</p>
+      <p>Miðgildi : ${zmed}</p>
+      <p>Staðalfrávik: ${zdev}</p>
+      <p>Summu: ${zsum}</p>
+      <p>Svið : ${zrange}</p>
     </section>
   `;
 
   return template;
 }
 
-export function makeIndex(entries) {
-  let list = "";
+export function makeList(entries) {
+  let list = '';
   for (const entry of entries) {
-    //const { slug, title } = entry;
+    // const { slug, title } = entry;
     const link = `
       <section>
         <ul>
@@ -46,37 +46,36 @@ export function makeIndex(entries) {
   return `${list}`;
 }
 
-export function make_HtmlTemplate(title, txt, data, showBack = false) {
-  const back = showBack ? '<p><a href="/">Til baka</a></p>' : "";
+export function makeTemplate(title, txt, data, showBack = false) {
+  const back = showBack ? '<p><a href="/">Til baka</a></p>' : '';
   return `
   <!doctype html>
     <html lang="is">
       <head>
         <meta charset="utf-8">
-        <title>${title ?? ""}</title>
-        <link rel="stylesheet" href="../public/styles.css">
+        <title>${title ?? ''}</title>
+        <link rel="stylesheet" href="styles.css">
       </head>
       <body>
         <div class="wrapper">
           <header>
             <h2>${txt}.txt</h2>
           </header>
-            ${data ?? ""}
+            ${data ?? ''}
             ${back}
       </div>
     </body>
   </html>`;
 }
 
-export function make_HtmlIndex(title, data, showBack = false) {
-  //const back = showBack ? '<p><a href="/">Til baka</a></p>' : "";
+export function makeIndex(title, data) {
   return `
   <!doctype html>
   <html lang="is">
     <head>
       <meta charset="utf-8">
-      <title>${title ?? ""}</title>
-      <link rel="stylesheet" href="../public/styles.css">
+      <title>${title ?? ''}</title>
+      <link rel="stylesheet" href="styles.css">
     </head>
     <body>
       <div class="wrapper"> 
@@ -85,7 +84,7 @@ export function make_HtmlIndex(title, data, showBack = false) {
         </header>
           <div class="categories">
             
-            ${data ?? ""}
+            ${data ?? ''}
             
           </div>
       </div>

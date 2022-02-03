@@ -1,17 +1,17 @@
-import { readdir } from "fs/promises";
-import express from "express";
+import { readdir } from 'fs/promises';
+import express from 'express';
 
-const DATA_DIR = "./data";
+const DATA_DIR = './data';
 
 const app = express();
 
-const hostname = "127.0.0.1";
+const hostname = '127.0.0.1';
 const port = 3000;
 
-app.get("/", async (req, res) => {
+app.get('/', async (req, res) => {
   const files = await readdir(DATA_DIR);
 
-  res.send(`hello world. Files are . ${files.join(", ")}`);
+  res.send(`hello world. Files are . ${files.join(', ')}`);
 });
 
 app.listen(port, hostname, () => {
