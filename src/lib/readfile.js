@@ -1,9 +1,9 @@
-const util = require('util');
-const fs = require('fs');
+const util = require("util");
+const fs = require("fs");
 
 const rfAsync = util.promisify(fs.readFile);
 
-const txt = './data/1.txt';
+const txt = "./data/1.txt";
 
 /*
 async function lesFile(){
@@ -54,8 +54,6 @@ function _max(){
 let max = _max();
 //console.log(max); 
 */
-
-
 
 /*
 console.log('\n');

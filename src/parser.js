@@ -1,5 +1,5 @@
-import matter from 'gray-matter';
-import { marked } from 'marked';
+import matter from "gray-matter";
+import { marked } from "marked";
 
 /**
  * Parse markdown string with frontmatter

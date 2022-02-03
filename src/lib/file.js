@@ -1,4 +1,4 @@
-import { stat } from 'fs/promises';
+import { stat } from "fs/promises";
 
 export async function direxists(dir) {
   try {
