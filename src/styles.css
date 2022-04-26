@@ -48,6 +48,7 @@ h3 {
 /*** Fyrirsögn ***/
 header {
   margin-bottom: calc(var(--spacing) * 2);
+  text-align: center;
 }
 
 header h1 {
@@ -113,4 +114,23 @@ header h1 {
   margin-bottom: 0;
   border-bottom: 0;
   padding-bottom: 0;
+}
+
+.greining {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.greining section {
+  display: flex;
+  flex-direction: column;
+  background-color: lightcyan;
+  width: 45%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .categories {
+    max-width: 1000px;
+  }
 }

@@ -47,11 +47,22 @@ async function main() {
     const newArray = arr.filter((value) => !Number.isNaN(value));
     
     if( newArray.length === 0 ){
-      // console.log('Tomur');
+      const createResult = 'Gögn er ekki til';
+      const createDataHtml = makeTemplate('Gagnavinnsla', filename, createResult, true);
+
+      await writeFile(join(OUTPUT_DIR, `${filename}.html`), createDataHtml, {
+        flag: 'w+',
+      });
+
+      datas.push(filename);
+
+      const index = makeIndex('Gagnavinnsla', makeList(datas));
+      await writeFile(join(OUTPUT_DIR, 'index.html'), index, { flag: 'w+' });
       
+      copyFile('src/styles.css', './dist/styles.css'); 
     }
-    else
-    {
+
+    else{
       const max = math.max(newArray);
       const min = math.min(newArray);
       const mid = math.median(newArray);
@@ -61,10 +72,10 @@ async function main() {
       const varin = math.variance(newArray);
       const range = max - min; 
      
-      const html = makeResult(max, min, varin, medaltal, mid, std, summa, range);
-      const dataHtml = makeTemplate('Gagnavinnsla', filename, html, true);
+      const createResult = makeResult(max, min, varin, medaltal, mid, std, summa, range);
+      const createDataHtml = makeTemplate('Gagnavinnsla', filename, createResult, true);
 
-      await writeFile(join(OUTPUT_DIR, `${filename}.html`), dataHtml, {
+      await writeFile(join(OUTPUT_DIR, `${filename}.html`), createDataHtml, {
         flag: 'w+',
       });
 

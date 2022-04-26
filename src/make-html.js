@@ -46,7 +46,7 @@ export function makeList(entries) {
 }
 
 export function makeTemplate(title, txt, data, showBack = false) {
-  const back = showBack ? '<p><a href="/">Til baka</a></p>' : '';
+  const back = showBack ? '<p><a href="index.html">Til baka</a></p>' : '';
   return `
   <!doctype html>
     <html lang="is">
@@ -60,8 +60,12 @@ export function makeTemplate(title, txt, data, showBack = false) {
           <header>
             <h2>${txt}.txt</h2>
           </header>
+          <div class="greining">
+
             ${data ?? ''}
             ${back}
+            
+          </div>
       </div>
     </body>
   </html>`;
@@ -83,7 +87,7 @@ export function makeIndex(title, data) {
         </header>
           <div class="categories">
             
-            ${data ?? 'Ekki til'}
+            ${data ?? 'Gögn er ekki til'}
             
           </div>
       </div>
