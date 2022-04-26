@@ -79,11 +79,11 @@ export function makeIndex(title, data) {
     <body>
       <div class="wrapper"> 
         <header>
-          <h2>${title}</h2>
+          <h2>${title ?? ''}</h2>
         </header>
           <div class="categories">
             
-            ${data ?? ''}
+            ${data ?? 'Ekki til'}
             
           </div>
       </div>

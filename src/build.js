@@ -42,7 +42,7 @@ async function main() {
       if (item.includes(',')) item = item.replace(',', '.');
       if (item === '') return NaN;
       return Number(item);
-      });
+    });
 
     const newArray = arr.filter((value) => !Number.isNaN(value));
     

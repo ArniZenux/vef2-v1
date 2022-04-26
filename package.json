@@ -7,7 +7,7 @@
     "build": "node ./src/build.js",
     "test": "NODE_OPTIONS='--experimental-vm-modules' jest ./test/*.js",
     "prettier": "prettier ./dist/index.html --write",
-    "lint": "stylelint styles.css ./dist/*.css && eslint ./src/*.js --fix",
+    "lint": "stylelint styles.css ./dist/*.css && eslint ./src/*.js",
     "dev": "browser-sync start --serveStatic ./dist --server --files ./dist/*.html"
   },
   "keywords": [],
