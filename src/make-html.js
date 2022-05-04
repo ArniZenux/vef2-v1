@@ -67,6 +67,9 @@ export function makeTemplate(title, txt, data, showBack = false) {
             
           </div>
       </div>
+      <footer>
+        <a href="https://github.com/ArniZenux/vef2-v1">Sjá kóða - github</a>
+      </footer>
     </body>
   </html>`;
 }
@@ -91,6 +94,9 @@ export function makeIndex(title, data) {
             
           </div>
       </div>
+      <footer>
+        <a href="https://github.com/ArniZenux/vef2-v1">Sjá kóða - github</a>
+      </footer>
     </body>
   </html>`;
 }
